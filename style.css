@@ -1,0 +1,88 @@
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    font-family: Arial, sans-serif;
+}
+
+.parent {
+    width: 400px;
+    max-width: 90%;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 25px;
+    box-shadow: 0 5px 15px grey;
+}
+
+.header {
+    width: 100%;
+    background-color: steelblue;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.header h1 {
+    font-size: 22px;
+}
+
+.header label {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+img {
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+input[type="date"] {
+    width: 80%;
+    height: 35px;
+    padding: 5px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 60%;
+    height: 40px;
+    background-color: steelblue;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+#close {
+    display: none;
+}
+
+body:has(#close:checked) .parent {
+    display: none;
+}
